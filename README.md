@@ -1,38 +1,33 @@
-# sv
+# SvelteKit + Supabase Starter
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+[still in progress, just some basic docs for now]
 
-## Creating a project
+This is simple, barebone starter template for SvelteKit with Supabase. Work in progress.
+There is authentication with email and password and OAuth with Github.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Getting started
 
-```bash
-# create a new project in the current directory
-npx sv create
+To get started you can clone this repository or use 'Use this template' button.
 
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+After cloning the repository install the dependencies:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+bun install
 ```
 
-## Building
-
-To create a production version of your app:
+If you want to use Supabase locally make sure to follow these instructions: https://supabase.com/docs/guides/local-development. You can start your server with
 
 ```bash
-npm run build
+bun supabase:start
 ```
 
-You can preview the production build with `npm run preview`.
+and stop it with
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```bash
+bun supabase:stop
+```
+
+You can also just create your instnce on supabase.com and use it.
+
+After you have your Supabase instance you need to create a `.env` and fill it like in the `.env.example` file.
+You can omit Github OAuth stuff if you do not want to use it.
